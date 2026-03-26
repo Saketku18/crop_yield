@@ -40,16 +40,19 @@ export default function App() {
     setResult(null);
     setError(null);
     try {
-      fetch("https://your-backend.onrender.com/predict", {
-       method: "POST",
-       headers: {
-        "Content-Type": "application/json"
-      },
+      
+  const res = await fetch("https://crop-yield-1-i1ay.onrender.com/predict", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
   body: JSON.stringify(form)
-})
-      if (!res.ok) throw new Error("Server error");
-      const data = await res.json();
-      setResult(data.prediction);
+});
+
+if (!res.ok) throw new Error("Server error");
+
+const data = await res.json();
+setResult(data.prediction);
     } catch {
       setError("Could not connect to the backend. Make sure the server is running on port 5000.");
     } finally {
