@@ -1,0 +1,72 @@
+# =========================
+# Node / Frontend
+# =========================
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Python / Backend
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# =========================
+# ML / Data files
+# =========================
+dataset/
+data/
+notebooks/
+*.csv
+*.xlsx
+*.json
+
+# Keep ONLY model file (optional)
+# Uncomment if needed:
+# !backend/crop_yield_model.pkl
+
+# =========================
+# OS / System files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Zip / temp files
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
